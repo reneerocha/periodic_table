@@ -1,9 +1,13 @@
-# namespace :import do
-#   desc 'Import periodic table data from json'
-#   task :data, file: :environment do |t, args|
-#     puts 'rails import:data[file_path] required' && return unless args[:file]
-#     puts "Importing file #{args[:file]}"
+namespace :import do
+  desc 'Import periodic table data from json'
+  
+  task :file  => :environment do
+    puts "Importing file"
+    element_list = JSON.parse(File.read('db/data.json'))
+    element_list["order"].each do |element|  
+        Element.create!(element_list[element].to_hash)
+    end
+    puts 'Import periodic table sucess'
+  end
 
-#     # TODO: Escreva o código para importar os dados aqui
-#   end
-# end
+end
