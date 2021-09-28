@@ -36,7 +36,7 @@
 a {
 	text-decoration: none;
 }
-first_table {
+.first_table {
 	width: 1350px;
 	table-layout: fixed;
 	margin-left: auto;
@@ -85,6 +85,8 @@ section:hover {
 .second_table {
 	margin-top: 50px;
 	width: 1125px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
  
@@ -180,6 +182,6 @@ section:hover {
   .lanthanide {
     background-color: #fbb6ce;
   }
-  .actinide {first_table
+  .actinide {
     background-color: #d6bcfa;
   }

@@ -4,7 +4,7 @@ class TableController < ApplicationController
   end
 
   def show
-    
+    @element = Element.find(params[:id])
   end
 
 end

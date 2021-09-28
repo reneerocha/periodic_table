@@ -1,0 +1,155 @@
+
+  <div class="main">
+  
+  <div class="leftbox">
+
+    <div >
+        <div class="shells">
+          <h5>
+          <% @element.shells.gsub("[", '').gsub("]", '').split(",").each do |shell| %>
+            <%= shell %><br>
+          <% end %>
+          </h5>
+        </div>
+        <div>
+        <h5><strong><%= @element.number %></strong></h5>
+        <h1><%= @element.symbol %></h1>
+        <h5><%= @element.name %><br>
+        <%= @element.atomic_mass %></h5>
+        </div>
+    </div> 
+
+    <p class="summary">
+    <strong>Summary:</strong>
+    <%= @element.summary %>
+    </p>
+  
+  </div>
+
+  <div class="rightbox">
+    <table>
+        <% if @element.appearance.present? %>
+          <tr>
+            <td>Appearance</td>
+            <td><%= @element.appearance %></td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>Atomic mass:</td>
+          <td><%= @element.atomic_mass %>
+          </td>
+        </tr>
+        <% if @element.boil.present? %>
+          <tr>
+            <td>Boil</td>
+            <td><%= @element.boil %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>Category</td>
+          <td><%= @element.category %>
+          </td>
+        </tr>
+        <% if @element.color.present? %>
+          <tr>
+            <td>Color</td>
+            <td><%= @element.color %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>Density</td>
+          <td><%= @element.density %>
+          </td>
+        </tr>
+        <% if @element.discovered_by.present? %>
+          <tr>
+            <td>Discovered by</td>
+            <td><%= @element.discovered_by %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>Melt</td>
+          <td><%= @element.melt %>
+          </td>
+        </tr>
+        <% if @element.molar_heat.present? %>
+          <tr>
+            <td>Molar Heat</td>
+            <td><%= @element.molar_heat %>
+            </td>
+          </tr>
+        <% end %>
+        <% if @element.named_by.present? %>
+          <tr>
+            <td>Named by</td>
+            <td><%= @element.named_by %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>Period</td>
+          <td><%= @element.period %>
+          </td>
+        </tr>
+        <tr>
+          <td>Phase</td>
+          <td><%= @element.phase %>
+          </td>
+        </tr>
+        <tr>
+          <td>Source</td>
+          <td><%= link_to "Information on Wikipedia", @element.source, target: "_blank" %></td>
+        </tr>
+        <% if @element.spectral_img.present? %>
+          <tr>
+            <td>Spectral image</td>
+            <td><%= link_to "Image on Wikipedia", @element.spectral_img, target: "_blank" %></td>
+          </tr>
+        <%end %>
+          <tr>
+            <td>Shells</td>
+            <td><%= @element.shells %></td>
+          </tr>
+        <% if @element.electron_configuration.present? %>
+          <tr>
+            <td>Electron configuration</td>
+            <td><%= @element.electron_configuration %>
+            </td>
+          </tr>
+        <% end %>
+        <% if @element.electron_configuration.present? %>
+          <tr>
+            <td>Electron configuration semantic</td>
+            <td><%= @element.electron_configuration_semantic %>
+            </td>
+          </tr>
+        <% end %>
+        <% if @element.electron_affinity.present? %>
+          <tr>
+            <td>Electron affinity</td>
+            <td><%= @element.electron_affinity %>
+            </td>
+          </tr>
+        <% end %>
+        <% if @element.electronegativity_pauling.present? %>
+          <tr>
+            <td>Electronegativity pauling</td>
+            <td><%= @element.electronegativity_pauling %>
+            </td>
+          </tr>
+        <% end %>
+        <% if @element.ionization_energies.present? %>
+          <tr>
+            <td>Ionization energies</td>
+            <td><%= @element.ionization_energies %>
+            </td>
+          </tr>
+        <% end %>
+
+    </table>
+  </div>
+
+</div>
