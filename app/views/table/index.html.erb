@@ -1,17 +1,57 @@
-<div class="container">
-  <div class="row">
-    <ul>
-    <% @elements["order"].each do |element| %>
-      <li>
-        <%= @elements[element]["name"] %>
-        <%= @elements[element]["number"] %>-
-        <%= @elements[element]["period"] %>,
-        <%= @elements[element]["atomic_mass"] %>
-      </li>
+<table class="first_table">
+<% for i in 1..7 do %>
+  <tr>
+  <% for j in 1..18 do %>
+    <td>
+    <% @elements.each do |element| %>  
+      <% if i == element.ypos.to_i && j == element.xpos.to_i %>
+        <%= link_to table_path(id: element) do %>
+        <section class="<%=element.category.gsub(/\s+/, '')%>">
+          <%= element.number %><br>
+          <h5><%= element.symbol %></h5>
+          <%= element.name %><br>
+          <%= element.atomic_mass %>
+        </section>
+        <% end %>
+      <% end %>
     <% end %>
-    </ul>
-  </div>
-</div>
+    </td>
+  <% end %>
+  </tr>
+<% end %>
+</table>
 
-
-
+<table class="second_table">
+  <tr>
+    <% @elements.each do |element| %>  
+      <% if element.category == "lanthanide" %>
+        <td>
+          <%= link_to table_path(id: element) do %>
+            <section class="<%=element.category %>">
+              <%= element.number %><br>
+              <h5><%= element.symbol %></h5>
+              <%= element.name %><br>
+              <%= element.atomic_mass %>
+            </section>
+          <% end %>
+        </td>
+      <% end %>
+    <% end %>
+  </tr>
+  <tr>
+    <% @elements.each do |element| %>  
+      <% if element.category == "actinide" %>
+        <td>
+          <%= link_to table_path(id: element) do %>
+            <section class="<%=element.category %>">
+              <%= element.number %><br>
+              <h5><%= element.symbol %></h5>
+              <%= element.name %><br>
+              <%= element.atomic_mass %>
+            </section>
+          <% end %>
+        </td>
+      <% end %>
+    <% end %>
+  </tr>
+</table>

@@ -13,3 +13,173 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500");
+ @import "font-awesome";
+
+ body{
+	 font: 0.7em 'Montserrat', sans-serif;
+	 background-color: #eee;
+	 color: darkslategrey;
+	 text-align: center;
+ }
+
+ h1 {
+	 margin: 20px 0;
+	 padding-bottom: 20px;
+ }
+ h5 {
+	 font-size: 1.4em;
+	 font-weight: 500;
+	 margin: 5px 0;
+	}
+a {
+	text-decoration: none;
+}
+first_table {
+	width: 1350px;
+	table-layout: fixed;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+	width: 75px;
+	height: 75px;
+	text-align: left;
+	overflow: hidden;
+	padding: 0;
+}
+
+td a {
+	color: #000;
+}
+
+td a:hover {
+	text-decoration: none;
+}
+
+footer {
+	background-color: #000;
+	color: #ffffff;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 10px;
+	bottom: 0;
+	position: fixed;
+}
+footer a {
+	color: #ccc;
+	text-decoration: underline;
+}
+
+section {
+	padding: 2px;
+}
+
+section:hover {
+	background-color: #000;
+	color: #fff;
+}
+.second_table {
+	margin-top: 50px;
+	width: 1125px;
+}
+
+ 
+ .main {
+	width: 975px;
+	margin-left: auto;
+  margin-right: auto;
+ }
+ .element {
+	 width: 170px;
+	 height: 170px;
+	 margin: 0 auto;
+	 padding: 20px;
+	 text-align: left;
+ }
+ .element h1 {
+	 font-size: 2.5em;
+ }
+ .rightbox, .leftbox {
+	 font-size: 1.2em;
+ }
+ .leftbox {
+	float:left; 
+	width: 350px;
+	padding: 0 50px;
+ }
+ .rightbox {
+	display: inline;
+	width: 500px;
+ }
+ .rightbox table {
+	width: 500px;
+	margin-left: 20px;
+}
+ .rightbox td {
+	border: 1px solid #ccc;
+	height: 35px;
+	padding-left: 12px;
+ }
+ .rightbox a {
+	text-decoration: underline;
+ }
+
+ .shells{
+	 display: inline;
+	 float:right;
+ }
+ .summary {
+	 font-size: 1.1em;
+	 text-align: justify;
+ }
+  .element {
+    height: 4.8vw;
+    width: 4.8vw;
+    background-color: #cbd5e0;
+    border-collapse: collapse;
+  }
+  .element-atomic-number {
+    font-size: 0.7vw;
+  }
+  .element-symbol {
+    font-size: 1.2vw;
+    margin-bottom: -0.1rem;
+  }
+  .element-name {
+    font-size: 0.65vw;
+  }
+  /* Category Colors */
+  .diatomicnonmetal {
+    background-color: #faf089;
+  }
+  .noblegas {
+    background-color: #fbd38d;
+  }
+  .alkalimetal {
+    background-color: #feb2b2;
+  }
+  .alkalineearthmetal {
+    background-color: #7f9cf5;
+  }
+  .metalloid {
+    background-color: #90cdf4;
+  }
+  .polyatomicnonmetal {
+    background-color: #81e6d9;
+  }
+  .transitionmetal {
+    background-color: #9ae6b4;
+  }
+  .post-transitionmetal {
+    background-color: #9ae6b4;
+  }
+  .lanthanide {
+    background-color: #fbb6ce;
+  }
+  .actinide {first_table
+    background-color: #d6bcfa;
+  }
